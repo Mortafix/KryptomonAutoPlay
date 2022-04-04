@@ -1,6 +1,8 @@
-# SETUP
-In order to setup your custom actions, you need to edit `instruction.txt` file.
-There are different base **settings** and 2 set of actions: **gameplay** and **other**.
+# Kryptomon Autoplay
+> *With great Kryptomons comes great responsibility* 
+
+In order to setup your custom actions, you need to edit `static/instructions.txt` file.  
+There are a few **settings** and 2 set of actions: **gameplay** and **other**.
 
 ## Settings
 * **timeframe**: bot will run every base timeframe (defualt: `5 min`)
