@@ -1,0 +1,7 @@
+# timeframe in minutes | kryptomons on different screens
+timeframe 5
+kryptomons 3, 1
+
+# actions
+food e2 k1 t6
+play e1 k1 t30
