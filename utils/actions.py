@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from os.path import join
 from time import sleep
 
 from static.items import Box, Extra, Item, Kryptomon, Menu
@@ -11,8 +12,9 @@ def od(n):
 
 
 class Instructions:
-    def __init__(self, screen):
+    def __init__(self, screen, folder):
         self.screen = screen
+        self.folder = folder
         self.current_screen = 1
         self.gameplay_actions = {
             "food": Menu.food,
@@ -26,9 +28,10 @@ class Instructions:
         self.free_boxes = {1: 3, 2: 6, 3: 9, 4: 11, 5: 12}
 
     def load_instructions(self):
+        instructions_file = join(self.folder, "static/instructions.txt")
         actions = [
             row.split(" ")
-            for row in open("static/instructions.txt").read().split("\n")
+            for row in open(instructions_file).read().split("\n")
             if row and row[0] != "#"
         ]
         if actions[0][0] != "timeframe":
